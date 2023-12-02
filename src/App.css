@@ -1,0 +1,56 @@
+/* Import the "Roboto" font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Apply font-family "Roboto" to the entire page */
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+
+/* Create a gradient background with custom colors */
+.gradient-custom {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+
+/* Style for date input when it's required and invalid */
+input[type="date"]:required:invalid::-webkit-datetime-edit {
+  /* Hide the invalid input text */
+  color: transparent;
+}
+
+/* Style for date input when it's focused */
+input[type="date"]:focus::-webkit-datetime-edit {
+  /* Set the text color to black when focused */
+  color: black !important;
+}
+
+/* Style for form labels inside a form-outline container */
+.form-outline .form-label {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.75rem;
+  /* Make the label unclickable */
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease-out;
+}
+
+/* Style for the form control (input) when focused */
+.form-control:focus {
+  box-shadow: none;
+  border-color: #3b71ca;
+}
+
+/* Style for the form label when the input is focused or has content */
+.form-outline .form-control:focus + .form-label,
+.form-outline .form-control:not(:placeholder-shown) + .form-label {
+  color: #3b71ca;
+  /* Shrink and move the label up on focus or when input has content */
+  transform: translateY(-2.3rem) scale(0.8);
+}
+
+/* Style for buttons with letter-spacing */
+.btn {
+  letter-spacing: -0.05rem;
+}
